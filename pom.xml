@@ -12,6 +12,10 @@
         <module>marsAdmin</module>
         <module>marsUser</module>
         <module>marsAccount</module>
+        <module>marsAdmin/mars-admin-server</module>
+        <module>marsAdmin/mars-admin-contract</module>
+        <module>marsAccount/mars-account-server</module>
+        <module>marsAccount/mars-account-contract</module>
     </modules>
 
     <properties>
@@ -19,5 +23,39 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.80</version>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.gouminger</groupId>
+                <artifactId>mars-admin-contract</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.gouminger</groupId>
+                <artifactId>mars-user-contract</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.gouminger</groupId>
+                <artifactId>mars-account-contract</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>2.6.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     
 </project>

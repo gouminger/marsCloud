@@ -3,23 +3,28 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>marsCloud</artifactId>
+        <artifactId>marsUser</artifactId>
         <groupId>com.gouminger</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>marsUser</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>mars-user-server</module>
-        <module>mars-user-contract</module>
-    </modules>
+    <artifactId>mars-user-server</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.gouminger</groupId>
+            <artifactId>mars-user-contract</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
