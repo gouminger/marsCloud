@@ -12,10 +12,6 @@
         <module>marsAdmin</module>
         <module>marsUser</module>
         <module>marsAccount</module>
-        <module>marsAdmin/mars-admin-server</module>
-        <module>marsAdmin/mars-admin-contract</module>
-        <module>marsAccount/mars-account-server</module>
-        <module>marsAccount/mars-account-contract</module>
     </modules>
 
     <properties>
